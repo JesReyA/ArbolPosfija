@@ -1,4 +1,4 @@
-package fes.aragon.arbolposfija;
+package fes.aragon.arbolposfija.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

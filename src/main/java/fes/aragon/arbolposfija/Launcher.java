@@ -1,5 +1,6 @@
 package fes.aragon.arbolposfija;
 
+import fes.aragon.arbolposfija.inicio.HelloApplication;
 import javafx.application.Application;
 
 public class Launcher {

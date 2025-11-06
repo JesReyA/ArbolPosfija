@@ -1,4 +1,4 @@
-package fes.aragon.arbolposfija;
+package fes.aragon.arbolposfija.inicio;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
