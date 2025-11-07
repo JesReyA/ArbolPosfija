@@ -12,7 +12,7 @@ public class Ventana extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Ventana.class.getResource("/fes/aragon/arbolposfija/hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Hello!");
+        stage.setTitle("Posfija con Arbol Binario");
         stage.setScene(scene);
         stage.show();
         stage.setResizable(false);
