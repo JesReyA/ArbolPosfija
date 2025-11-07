@@ -1,6 +1,7 @@
 module fes.aragon.arbolposfija {
     requires javafx.controls;
     requires javafx.fxml;
+    requires Herramientas;
 
 
     opens fes.aragon.arbolposfija to javafx.fxml;
