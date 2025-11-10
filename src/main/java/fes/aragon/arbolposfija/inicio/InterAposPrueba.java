@@ -1,17 +1,26 @@
+
 package fes.aragon.arbolposfija.inicio;
 
 public class InterAposPrueba {
     public static void main(String[] args) {
-        InterfijaAPostfija test = new InterfijaAPostfija("34*3+");
-        test.interfijaAPostfija();
+        InterfijaAPostfija test = new InterfijaAPostfija("10 5 8 * + 4 2 / - 6 20 * 7 / + 3 - 9 - ");
+        ArbolBinarioArreglo<Integer> testArbol =new ArbolBinarioArreglo<>();
 
-        try {
+
+            test.construirArbol();
+
+
             test.prefija();
-            //test.postfija();
-            //test.interfija();
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+            test.postfija();
+            test.interfija();
+
+            System.out.println(test.getExpresionInterfija());
+            System.out.println(test.getExpresionPrefija());
+            System.out.println(test.getExpresionPostfija());
+
+            System.out.println(test.evaluarExpresion());
+
+
 
     }
 }

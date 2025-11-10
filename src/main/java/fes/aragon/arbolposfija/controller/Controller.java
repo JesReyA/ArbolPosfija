@@ -1,14 +1,21 @@
 package fes.aragon.arbolposfija.controller;
 
+import fes.aragon.arbolposfija.inicio.InterfijaAPostfija;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+
+import java.awt.*;
 
 public class Controller {
     @FXML
-    private Label welcomeText;
+    TextField operacionPosfija;
+    TextArea resultadoPosfija;
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    public void evaluarOperacion(ActionEvent event) {
+        InterfijaAPostfija arbolPosfija = new InterfijaAPostfija(operacionPosfija.getText());
+        arbolPosfija.construirArbol();
+        resultadoPosfija.setText(Double.toString(arbolPosfija.evaluarExpresion()));
     }
 }
