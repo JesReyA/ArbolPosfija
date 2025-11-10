@@ -11,11 +11,13 @@ import java.awt.*;
 public class Controller {
     @FXML
     TextField operacionPosfija;
+
+    @FXML
     TextArea resultadoPosfija;
 
     public void evaluarOperacion(ActionEvent event) {
         InterfijaAPostfija arbolPosfija = new InterfijaAPostfija(operacionPosfija.getText());
         arbolPosfija.construirArbol();
-        resultadoPosfija.setText(Double.toString(arbolPosfija.evaluarExpresion()));
+        resultadoPosfija.setText(String.valueOf(arbolPosfija.evaluarExpresion()));
     }
 }
