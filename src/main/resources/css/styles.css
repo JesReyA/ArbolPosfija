@@ -10,6 +10,6 @@
     -fx-font-size: 15px;
 }
 
-#operacionPosfija, #resultadoPosfija{
+#operacionPosfija, #resultadoPosfija, #arbolPosfija{
     -fx-background-radius: 10px;
 }
