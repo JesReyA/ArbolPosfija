@@ -10,10 +10,7 @@ import java.awt.*;
 
 public class Controller {
     @FXML
-    TextField operacionPosfija;
-
-    @FXML
-    TextArea resultadoPosfija;
+    TextField operacionPosfija, resultadoPosfija;
 
     public void evaluarOperacion(ActionEvent event) {
         InterfijaAPostfija arbolPosfija = new InterfijaAPostfija(operacionPosfija.getText());

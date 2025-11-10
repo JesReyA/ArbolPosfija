@@ -1,0 +1,15 @@
+.button{
+    -fx-background-radius: 10px;
+}
+
+#labelTitulo{
+    -fx-font-size: 25px;
+}
+
+#labelInformacion{
+    -fx-font-size: 15px;
+}
+
+#operacionPosfija, #resultadoPosfija{
+    -fx-background-radius: 10px;
+}
