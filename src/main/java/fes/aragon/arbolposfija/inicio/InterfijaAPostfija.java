@@ -71,22 +71,32 @@ public class InterfijaAPostfija {
         return raiz;
     }
 
-    public void imprimirArbol() {
+    public String imprimirArbol() {
         NodoCaracteres<String> n = nodos.elementoSuperior();
-        Cola<NodoCaracteres<String>> cola = new Cola<>();
-        if (n != null) {
-            cola.insertar(n);
-            while (!cola.estaVacia()) {
-                n = cola.extraer();
-                imprimir(n);
-                if (n.izquierdo != null) {
-                    cola.insertar(n.izquierdo);
-                }
-                if (n.derecho != null) {
-                    cola.insertar(n.derecho);
-                }
-            }
+        if (n==null){
+            return "Arbol vacío";
         }
+        StringBuilder sb= new StringBuilder();
+        Cola<NodoCaracteres<String>> cola = new Cola<>();
+            cola.insertar(n);
+            int nivel=0;
+            while (!cola.estaVacia()) {
+                int tamanonivel = cola.getLongitud();
+                sb.append("Nivel ").append(nivel).append(": ");
+                for (int i = 0; i < tamanonivel; i++) {
+                    NodoCaracteres<String> act =cola.extraer();
+                    sb.append("(").append(act.getDato()).append(") ");
+                    if (act.izquierdo!=null){
+                        cola.insertar(act.izquierdo);
+                    }
+                    if (act.derecho!=null){
+                        cola.insertar(act.derecho);
+                    }
+                }
+                sb.append("\n");
+                nivel++;
+            }
+            return sb.toString();
     }
 
 
